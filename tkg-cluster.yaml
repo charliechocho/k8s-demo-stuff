@@ -1,8 +1,8 @@
 apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
-  name: hipster-store 
-  namespace: web-store
+  name: <cluster-name> 
+  namespace: tkg
 spec:
   topology:
     controlPlane:
@@ -10,17 +10,17 @@ spec:
       class: best-effort-xsmall
       storageClass: k8s-policy
     workers:
-      count: 3
+      count: 1
       class: best-effort-xsmall
       storageClass: k8s-policy
   distribution:
-    version: v1.18.5+vmware.1-tkg.1.c40d30d
+    version: v1.17.8+vmware.1-tkg.1.5417466
   settings:
     network:
       cni:
         name: antrea
       services:
-        cidrBlocks: ["198.64.100.0/12"]
+        cidrBlocks: ["198.51.100.0/12"]
       pods:
-        cidrBlocks: ["192.1.2.0/16"]
+        cidrBlocks: ["192.0.2.0/16"]
       serviceDomain: managedcluster.local
