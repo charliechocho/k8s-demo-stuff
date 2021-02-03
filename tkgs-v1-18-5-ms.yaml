@@ -1,8 +1,8 @@
 apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
-  name: hipster-store 
-  namespace: web-store
+  name: ifs-cluster 
+  namespace: ifs-dev
 spec:
   topology:
     controlPlane:

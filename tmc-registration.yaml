@@ -1,0 +1,8 @@
+apiVersion: installers.tmc.cloud.vmware.com/v1alpha1
+kind: AgentInstall
+metadata:
+  name: tmc-agent-installer-config
+  namespace: svc-tmc-c8
+spec:
+  operation: INSTALL
+  registrationLink: https://keithlee.tmc.cloud.vmware.com/installer?id=c09293b2957b119dde8104b8da00fc9fbd12184cf38e1f1c9c86137e3a3cd855&source=registration
