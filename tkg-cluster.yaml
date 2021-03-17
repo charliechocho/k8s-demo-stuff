@@ -1,8 +1,8 @@
 apiVersion: run.tanzu.vmware.com/v1alpha1
 kind: TanzuKubernetesCluster
 metadata:
-  name: <cluster-name> 
-  namespace: tkg
+  name: <cluster-name>
+  namespace: <ns-name>
 spec:
   topology:
     controlPlane:
@@ -14,7 +14,7 @@ spec:
       class: best-effort-xsmall
       storageClass: k8s-policy
   distribution:
-    version: v1.17.8+vmware.1-tkg.1.5417466
+    version: v1.18.10+vmware.1-tkg.1.3a6cd48
   settings:
     network:
       cni:

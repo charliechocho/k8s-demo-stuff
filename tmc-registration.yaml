@@ -5,4 +5,4 @@ metadata:
   namespace: svc-tmc-c8
 spec:
   operation: INSTALL
-  registrationLink: https://keithlee.tmc.cloud.vmware.com/installer?id=c09293b2957b119dde8104b8da00fc9fbd12184cf38e1f1c9c86137e3a3cd855&source=registration
+  registrationLink: https://tanzuendtoend.tmc.cloud.vmware.com/installer?id=686b3c303d138e6ef8869e7087c88933e37f14ee5e51f4116d6704dcb43d7f50&source=registration
