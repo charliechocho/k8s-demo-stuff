@@ -1,6 +1,6 @@
 import yaml
 
-filename = '/Users/msoderberg/pez/pez-demo/k8s-demo-stuff/clusterYamls/clu.yaml'
+filename = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
 clu_name = input('What name do you want for your cluster?: ')
 
 def load_yaml():
