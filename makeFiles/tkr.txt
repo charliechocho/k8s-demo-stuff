@@ -1,0 +1,6 @@
+v1.21.2---vmware.1-tkg.1.ee25d55      v1.21.2+vmware.1-tkg.1.ee25d55      True    True         6d18h
+v1.21.6---vmware.1-tkg.1              v1.21.6+vmware.1-tkg.1              True    True         6d18h
+v1.21.6---vmware.1-tkg.1.b3d708a      v1.21.6+vmware.1-tkg.1.b3d708a      True    True         6d18h
+v1.22.9---vmware.1-tkg.1.cc71bc8      v1.22.9+vmware.1-tkg.1.cc71bc8      True    True         6d18h
+v1.23.8---vmware.2-tkg.2-zshippable   v1.23.8+vmware.2-tkg.2-zshippable   True    True         6d18h
+v1.23.8---vmware.3-tkg.1              v1.23.8+vmware.3-tkg.1              True    True         6d18h

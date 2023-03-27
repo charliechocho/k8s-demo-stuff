@@ -1,0 +1,15 @@
+vSphere w. Tanzu Login instructions:
+
+
+1. kubectl vsphere login --server vc01cl01-wcp.h2o-4-6582.h2o.vmware.com -u msoderberg@vsphere.local --insecure-skip-tls-verify --tanzu-kubernetes-cluster-namespace web-ns
+
+2. enter your domain pwd
+
+3. create your Tanzu Kubernetes Cluster
+
+4. kubectl vsphere login --server vc01cl01-wcp.h2o-4-6582.h2o.vmware.com -u msoderberg@vsphere.local --insecure-skip-tls-verify --tanzu-kubernetes-cluster-name <your-cluster-name>
+
+5. Start using your TKC and deploy your app according to k8s best practices
+
+
+

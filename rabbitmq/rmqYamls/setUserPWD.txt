@@ -1,0 +1,5 @@
+# Access RMQ pod like this: k exec -n rabbitmq-system -it <pod-name> -- /bin/bash
+# Add user by typing these commands with the user you'd like to administer from the web:
+# * rabbitmqctl add_user username password
+# * rabbitmqctl set_user_tags username administrator
+# * rabbitmqctl set_permissions -p / username ".*" ".*" ".*"

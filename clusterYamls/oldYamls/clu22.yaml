@@ -1,0 +1,25 @@
+apiVersion: run.tanzu.vmware.com/v1alpha2
+kind: TanzuKubernetesCluster
+metadata:
+  name: dev-clu
+  #namespace:  <name-space>
+spec:
+  topology:
+    controlPlane:
+      replicas: 1
+      vmClass: best-effort-small
+      storageClass: vsphere-with-tanzu-storage-policy
+      tkr:  
+        reference:
+          name: v1.22.9---vmware.1-tkg.1.cc71bc8
+    nodePools:
+    - name: worker-nodepool-a1
+      replicas: 1 
+      vmClass: best-effort-medium
+      storageClass: vsphere-with-tanzu-storage-policy
+      tkr:  
+        reference:
+          name: v1.22.9---vmware.1-tkg.1.cc71bc8
+
+
+ 
