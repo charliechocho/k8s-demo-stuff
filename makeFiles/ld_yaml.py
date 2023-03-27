@@ -1,4 +1,5 @@
 import yaml
+filename = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
 
 def load_yaml(filename):
     """Load TGC yaml file"""

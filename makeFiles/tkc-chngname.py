@@ -1,4 +1,4 @@
-from yaml import load_yaml, chng_yaml
+from ld_yaml import load_yaml, chng_yaml
 
 #put cluter yaml in variable and ask for cluster name
 filename = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
