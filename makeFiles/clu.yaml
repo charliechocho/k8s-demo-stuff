@@ -1,11 +1,11 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: my-happy-clu
+  name: production-clu
 spec:
   topology:
     controlPlane:
-      replicas: 1
+      replicas: 3
       storageClass: vc01cl01-t0compute
       tkr:
         reference:
@@ -13,7 +13,7 @@ spec:
       vmClass: best-effort-medium
     nodePools:
     - name: worker-nodepool-a1
-      replicas: 3
+      replicas: 10
       storageClass: vc01cl01-t0compute
       tkr:
         reference:
