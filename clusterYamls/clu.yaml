@@ -1,7 +1,7 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: postgres-clu
+  name: rabbit-mq-clu
 spec:
   topology:
     controlPlane:
