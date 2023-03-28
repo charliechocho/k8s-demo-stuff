@@ -1,4 +1,4 @@
 NAME                 CPU   MEMORY   AGE
-best-effort-large    4     16Gi     3d11h
-best-effort-medium   2     8Gi      3d11h
-best-effort-small    2     4Gi      3d11h
+best-effort-large    4     16Gi     4d8h
+best-effort-medium   2     8Gi      4d8h
+best-effort-small    2     4Gi      4d8h

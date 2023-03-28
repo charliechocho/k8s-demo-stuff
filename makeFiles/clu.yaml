@@ -1,19 +1,19 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: production-clu
+  name: dbtest-clu
 spec:
   topology:
     controlPlane:
-      replicas: 3
+      replicas: 1
       storageClass: vc01cl01-t0compute
       tkr:
         reference:
           name: v1.23.8---vmware.3-tkg.1
-      vmClass: best-effort-medium
+      vmClass: best-effort-small
     nodePools:
     - name: worker-nodepool-a1
-      replicas: 10
+      replicas: 5
       storageClass: vc01cl01-t0compute
       tkr:
         reference:
