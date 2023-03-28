@@ -22,9 +22,15 @@ def get_mc():
     return ctrl, work
 
 def mc_choice(verlist, ctrl, work):
-    try: 
+    try:
         k8s_ctrl = verlist[int(ctrl)]
-        k8s_work = verlist[int(work)]
-        return k8s_ctrl, k8s_work
     except KeyError:
-        print(f'One of the VM Classes is not available')
+        print(f'VM Class for control node is not available')
+        exit()
+    try:
+        k8s_work = verlist[int(work)]
+    except KeyError:
+        print(f'VM Class for worker node is not available')
+        exit()
+    
+    return k8s_ctrl, k8s_work
