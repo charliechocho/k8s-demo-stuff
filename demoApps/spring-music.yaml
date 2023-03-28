@@ -33,27 +33,27 @@ spec:
             - name: INSTANCE_NAME
               valueFrom:
                 secretKeyRef:
-                  name: musicreg-instance-db-secret
+                  name: mattias-db-instance-db-secret
                   key: instancename
             - name: NAMESPACE_NAME
               valueFrom:
                 secretKeyRef:
-                  name: musicreg-instance-db-secret
+                  name: mattias-db-instance-db-secret
                   key: namespace
             - name: DATABASE_NAME
               valueFrom:
                 secretKeyRef:
-                  name: musicreg-instance-db-secret
+                  name: mattias-db-instance-db-secret
                   key: dbname
             - name: DATABASE_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: musicreg-instance-db-secret
+                  name: mattias-db-instance-db-secret
                   key: username
             - name: DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: musicreg-instance-db-secret
+                  name: mattias-db-instance-db-secret
                   key: password
             - name: USE_PIVOTAL_POSTGRES
               value: "true"

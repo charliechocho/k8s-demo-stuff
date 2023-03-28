@@ -1,7 +1,7 @@
 apiVersion: sql.tanzu.vmware.com/v1
 kind: Postgres
 metadata:
-  name: musicreg-instance
+  name: mattias-db-instance
 spec:
   storageClassName: vc01cl01-t0compute
   storageSize: 800M

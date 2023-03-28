@@ -48,6 +48,13 @@ allow:
 	@echo "Creating Allow Deploy Rule"
 	@kubectl apply -f $(APP_ROOT)/configYamls/allow-runasnonroot-clusterrole.yaml
 
+certman-inst:
+	@#this installs certmanager on a cluster, make sure you have HELM installed
+	@echo "Installing Certmanager On The Current Cluster Using HELM"
+	@helm repo update
+	@helm install cert-manager jetstack/cert-manager --namespace cert-manager \
+	--create-namespace --version $(CERTMAN_VER) --set installCRDs=true
+	
 tkc-chyaml: chyaml/bin/activate
 	@echo "Let's you name your next cluster to be deleted or created"
 	@# assumes you have the clu.yaml file prepped 

@@ -17,18 +17,12 @@ def prn_choice():
     for key, value in ver_list.items():
         print(f"{key}.\t{value}")
 
-def mc_choice():
-    mc_image = input('What vmclass do you want for you cluster? "a" = Abort: ')
-
-    if mc_image == 'a':
-        print('Aborting MC Update!')
-        exit()
-    else:
-        try: 
-            k8s_ver = ver_list[int(mc_image)]
-            return k8s_ver
-        except KeyError:
-            print(f'VM Class {mc_image} is not available')
+def mc_choice(ctrl, work):
+    try: 
+        k8s_ver = ver_list[int(mc_image)]
+        return k8s_ver
+    except KeyError:
+        print(f'VM Class {mc_image} is not available')
         
 
 

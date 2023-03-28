@@ -13,7 +13,7 @@ data:
 apiVersion: rabbitmq.com/v1beta1
 kind: RabbitmqCluster
 metadata:
-  name: production-ready
+  name: rmq-clu-1
 spec:
   service:
     type: LoadBalancer
@@ -35,7 +35,7 @@ spec:
       collect_statistics_interval = 10000
   persistence:
     storageClassName: vc01cl01-t0compute
-    storage: 10Gi
+    storage: 5Gi
   override:
     statefulSet:
       spec:
