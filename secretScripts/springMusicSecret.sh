@@ -1,1 +1,0 @@
-kubectl create secret -n $1 docker-registry springsecret --docker-server=msodreg.azurecr.io --docker-username=msodreg --docker-password=52dR9P+Q17eiRb+WpQtJYQIyLpx0aowC --docker-email=msoderberg@vmware.com 

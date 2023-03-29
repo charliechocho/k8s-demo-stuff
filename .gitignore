@@ -1,3 +1,5 @@
 makeFiles/chyaml
+makeFiles/makefile.env
 .DS_Store
 spring-music-1/build
+secretScripts
