@@ -15,14 +15,14 @@ parameters = pika.ConnectionParameters('10.220.3.41',
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
-channel.queue_declare(queue='hello Tanzu')
+channel.queue_declare(queue='Tanzu Cities')
 
 for i in range(10):
 	names.append(fake.city())
 
 for fName in names:
 	channel.basic_publish(exchange='',
-                  routing_key='hello Tanzu',
+                  routing_key='Tanzu Cities',
                   body=f'{fName}')
 	print(f" [x] Sent {fName}!")
 connection.close()
