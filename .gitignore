@@ -3,3 +3,6 @@ makeFiles/makefile.env
 .DS_Store
 spring-music-1/build
 secretScripts
+allmyrecords.csv
+soundtracks.csv
+

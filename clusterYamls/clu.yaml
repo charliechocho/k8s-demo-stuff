@@ -1,7 +1,7 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: rmq-clu
+  name: dev-clu
 spec:
   topology:
     controlPlane:
@@ -10,10 +10,10 @@ spec:
       tkr:
         reference:
           name: v1.23.8---vmware.3-tkg.1
-      vmClass: best-effort-medium
+      vmClass: best-effort-small
     nodePools:
     - name: worker-nodepool-a1
-      replicas: 3
+      replicas: 2
       storageClass: vc01cl01-t0compute
       tkr:
         reference:
