@@ -1,7 +1,7 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: advania-clu
+  name: tap-clu
 spec:
   topology:
     controlPlane:
@@ -10,10 +10,10 @@ spec:
       tkr:
         reference:
           name: v1.23.8---vmware.3-tkg.1
-      vmClass: best-effort-small
+      vmClass: best-effort-medium
     nodePools:
     - name: worker-nodepool-a1
-      replicas: 2
+      replicas: 4
       storageClass: vc01cl01-t0compute
       tkr:
         reference:
