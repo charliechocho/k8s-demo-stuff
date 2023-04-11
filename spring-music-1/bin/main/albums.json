@@ -1,205 +1,205 @@
 [
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Nirvana",
-        "title": "Nevermind",
-        "releaseYear": "1991",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Beach Boys",
-        "title": "Pet Sounds",
-        "releaseYear": "1966",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Marvin Gaye",
-        "title": "What's Going On",
-        "releaseYear": "1971",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Jimi Hendrix Experience",
-        "title": "Are You Experienced?",
-        "releaseYear": "1967",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "U2",
-        "title": "The Joshua Tree",
-        "releaseYear": "1987",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Beatles",
-        "title": "Abbey Road",
-        "releaseYear": "1969",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Fleetwood Mac",
-        "title": "Rumours",
-        "releaseYear": "1977",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Elvis Presley",
-        "title": "Sun Sessions",
-        "releaseYear": "1976",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Michael Jackson",
-        "title": "Thriller",
-        "releaseYear": "1982",
-        "genre": "Pop"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Rolling Stones",
-        "title": "Exile on Main Street",
-        "releaseYear": "1972",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Bruce Springsteen",
-        "title": "Born to Run",
-        "releaseYear": "1975",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Clash",
-        "title": "London Calling",
-        "releaseYear": "1980",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Eagles",
-        "title": "Hotel California",
-        "releaseYear": "1976",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Led Zeppelin",
-        "title": "Led Zeppelin",
-        "releaseYear": "1969",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Led Zeppelin",
-        "title": "IV",
-        "releaseYear": "1971",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Police",
-        "title": "Synchronicity",
-        "releaseYear": "1983",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "U2",
-        "title": "Achtung Baby",
-        "releaseYear": "1991",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Rolling Stones",
-        "title": "Let it Bleed",
-        "releaseYear": "1969",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Beatles",
-        "title": "Rubber Soul",
-        "releaseYear": "1965",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Ramones",
-        "title": "The Ramones",
-        "releaseYear": "1976",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Queen",
-        "title": "A Night At The Opera",
-        "releaseYear": "1975",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Boston",
-        "title": "Don't Look Back",
-        "releaseYear": "1978",
-        "genre": "Rock"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "BB King",
-        "title": "Singin' The Blues",
-        "releaseYear": "1956",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Albert King",
-        "title": "Born Under A Bad Sign",
-        "releaseYear": "1967",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Muddy Waters",
-        "title": "Folk Singer",
-        "releaseYear": "1964",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "The Fabulous Thunderbirds",
-        "title": "Rock With Me",
-        "releaseYear": "1979",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Robert Johnson",
-        "title": "King of the Delta Blues",
-        "releaseYear": "1961",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Stevie Ray Vaughan",
-        "title": "Texas Flood",
-        "releaseYear": "1983",
-        "genre": "Blues"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "Stevie Ray Vaughan",
-        "title": "Couldn't Stand The Weather",
-        "releaseYear": "1984",
-        "genre": "Blues"
-    }
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "101 South",
+    "title": "101 South",
+    "releaseYear": "2000",
+    "genre": "aor"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "All American Rejects",
+    "title": "When the world comes down",
+    "releaseYear": "2008",
+    "genre": "modern rock"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Average White Band",
+    "title": "AWB",
+    "releaseYear": "1974",
+    "genre": "westcoast"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Billy Joel",
+    "title": "Streetlife serenade",
+    "releaseYear": "1974",
+    "genre": "pop"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Caamora",
+    "title": "Walk on water",
+    "releaseYear": "2007",
+    "genre": "prog"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Cigarettes After Sex",
+    "title": "Cigarettes after sex",
+    "releaseYear": "2017",
+    "genre": "Indie"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Dave Kerzner",
+    "title": "Static (Kickatarter + Bonus Disc)",
+    "releaseYear": "2017",
+    "genre": "prog"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Doobie Brothers (the)",
+    "title": "Takin it to the streets",
+    "releaseYear": "1976",
+    "genre": "westcoast"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Emitt Rhodes",
+    "title": "Mirror mirror",
+    "releaseYear": "1971",
+    "genre": "power pop"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Flirts (the)",
+    "title": "Born to flirt",
+    "releaseYear": "1983",
+    "genre": "italo"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Gigi",
+    "title": "Gigi (OST) ",
+    "releaseYear": "1958",
+    "genre": "soundtrack"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Henry Paul",
+    "title": "Henry Paul",
+    "releaseYear": "1982",
+    "genre": "aor"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "James Bond",
+    "title": "Octopussy (OST)",
+    "releaseYear": "1983",
+    "genre": "soundtrack"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Jordan Rudess",
+    "title": "Listen",
+    "releaseYear": "1993",
+    "genre": "pomp rock"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Kevin Raleigh",
+    "title": "Delusions of grandeur",
+    "releaseYear": "1989",
+    "genre": "aor"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Licence",
+    "title": "H\u00f6gt spel",
+    "releaseYear": "1982",
+    "genre": "westcoast"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Magnum",
+    "title": "II",
+    "releaseYear": "1979",
+    "genre": "pomp rock"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Melony",
+    "title": "Satisfaction",
+    "releaseYear": "1996",
+    "genre": "power pop"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Muse",
+    "title": "Drones",
+    "releaseYear": "2015",
+    "genre": "modern rock"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Over The Top",
+    "title": "Over the top (OST)",
+    "releaseYear": "1987",
+    "genre": "soundtrack"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Pink Floyd",
+    "title": "The final cut",
+    "releaseYear": "1983",
+    "genre": "prog"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Regina Spektor",
+    "title": "What we saw from the cheap seats",
+    "releaseYear": "2012",
+    "genre": "pop"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Rush",
+    "title": "Presto",
+    "releaseYear": "1989",
+    "genre": "prog"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Sigrid",
+    "title": "Sucker punch (Picture Disc)",
+    "releaseYear": "2019",
+    "genre": "pop"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Steve Winwood",
+    "title": "Back in the high life",
+    "releaseYear": "1986",
+    "genre": "rock"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Terramara",
+    "title": "Dust and fiction",
+    "releaseYear": "2008",
+    "genre": "pomp"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Transatlantic",
+    "title": "SMPT E",
+    "releaseYear": "2000",
+    "genre": "prog"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "W.E.T",
+    "title": "W.e.t",
+    "releaseYear": "2009",
+    "genre": "aor"
+  },
+  {
+    "_class": "org.cloudfoundry.samples.music.domain.Album",
+    "artist": "Laura Branigan",
+    "title": "Touch",
+    "releaseYear": "1987",
+    "genre": "rock"
+  }
 ]

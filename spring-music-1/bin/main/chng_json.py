@@ -31,7 +31,7 @@ def load_json(jfile, list):
 
 def save_json(file):
     with open('new_albums.json', 'w') as f:
-        json.dump(file, f)
+        json.dump(file, f, indent = 2, separators=(',', ': '))
 
 
 
