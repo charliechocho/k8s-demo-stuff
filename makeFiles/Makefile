@@ -10,6 +10,12 @@ ifeq ($(USER), dev)
 else ifeq ($(USER), admin)
  	PASSWD ?= $(SUPERVISOR_PASSWORD)
  	CLU_USER ?= $(ADMIN_USER)
+else ifeq ($(USER), lab_admin)
+	PASSWD ?= $(LAB_SUPER_PWD)
+	CLU_USER ?= $(ADMIN_USER)
+else ifeq ($(USER), lab_user)
+	PASSWD ?= $(LAB_USER_PWD)
+	CLU_USER ?= $(LAB_USER)
 endif
 
 export KUBECTL_VSPHERE_PASSWORD ?= $(PASSWD)
@@ -18,6 +24,11 @@ login:
 	@#logs in to the supervisor cluster
 	@echo "Loggar in som $(CLU_USER) på TKC"
 	@kubectl vsphere login --server $(SUPERVISOR_CLU) -u $(CLU_USER) --insecure-skip-tls-verify
+
+login-lab:
+	@#logs in to the lab supervisor cluster
+	@echo "Loggar in som $(CLU_USER) på TKC"
+	@kubectl vsphere login --server $(LAB_SUPER_CLU) -u $(CLU_USER) --insecure-skip-tls-verify
 
 logout:
 	@#logs out from the vSphere w. Tanzu Session
@@ -28,6 +39,13 @@ login-clu:
 	@#requries 2 arguments - "CLU" and "USER"
 	@echo "$(CLU_USER) Loggar In På Kluster $(CLU)"
 	@kubectl vsphere login --server $(SUPERVISOR_CLU) -u $(CLU_USER) --insecure-skip-tls-verify --tanzu-kubernetes-cluster-name $(CLU)
+	@kubectx $(CLU)
+	@kubectl get nodes
+
+login-lab-clu:
+	@#requries 2 arguments - "CLU" and "USER"
+	@echo "$(CLU_USER) Loggar In På Kluster $(CLU)"
+	@kubectl vsphere login --server $(LAB_SUPER_CLU) -u $(CLU_USER) --insecure-skip-tls-verify --tanzu-kubernetes-cluster-name $(CLU)
 	@kubectx $(CLU)
 	@kubectl get nodes
 

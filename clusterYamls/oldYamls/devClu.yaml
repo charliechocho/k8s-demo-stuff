@@ -14,7 +14,7 @@ spec:
           name: v1.23.8---vmware.3-tkg.1
     nodePools:
     - name: worker-nodepool-a1
-      replicas: 2 
+      replicas: 3 
       vmClass: best-effort-medium	
       storageClass: vc01cl01-t0compute
       tkr:  
