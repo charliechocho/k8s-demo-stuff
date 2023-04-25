@@ -1,6 +1,10 @@
+import os
 from ld_yaml import load_yaml, chng_yaml
 from mc import build_machine_class
 import vmcl_parser
+
+#Clear the screen before starting the process
+os.system('clear')
 
 #put cluter yaml in variable and ask for cluster name
 yamlfile = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
