@@ -1,7 +1,7 @@
 apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
-  name: pg-clu
+  name: tkg-clu1 
   #namespace:  <name-space>
 spec:
   topology:
@@ -11,7 +11,7 @@ spec:
       storageClass: vc01cl01-t0compute
       tkr:  
         reference:
-          name: v1.23.8---vmware.3-tkg.1
+          name: v1.21.6---vmware.1-tkg.1.b3d708a
     nodePools:
     - name: worker-nodepool-a1
       replicas: 3 
@@ -19,7 +19,7 @@ spec:
       storageClass: vc01cl01-t0compute
       tkr:  
         reference:
-          name: v1.23.8---vmware.3-tkg.1
+          name: v1.21.6---vmware.1-tkg.1.b3d708a
 
 
  
