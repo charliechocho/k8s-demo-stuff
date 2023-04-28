@@ -7,7 +7,7 @@ names = []
 fake = Faker()
 
 credentials = pika.PlainCredentials('msoderberg', 'vmware1!')
-parameters = pika.ConnectionParameters('10.220.80.135',
+parameters = pika.ConnectionParameters('10.220.80.136',
                                    5672,
                                    '/',
                                    credentials)
