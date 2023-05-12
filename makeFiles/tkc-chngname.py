@@ -3,11 +3,15 @@ from ld_yaml import load_yaml, chng_yaml
 from mc import build_machine_class
 import vmcl_parser
 
-#Clear the screen before starting the process
+#Clear the screen and ask for lab env before starting the process
 os.system('clear')
+labenv = input('What environment will you use (LAB or H2O): ')
 
-#put cluter yaml in variable and ask for cluster name
-yamlfile = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
+#put lab or h2o cluster yaml in variable and ask for cluster name
+if labenv.lower() == 'h2o':
+    yamlfile = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
+else:
+    yamlfile = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu-lab.yaml'
 verlist = {}
 
 clu_name = input('What name do you want for your cluster?: ')
