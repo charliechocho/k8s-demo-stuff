@@ -34,5 +34,5 @@ ctrl_vm, work_vm = vmcl_parser.mc_choice(choices, ctrl, work)
 
 #load cluster yaml file and change name and replica values
 yml = load_yaml(yamlfile)
-chng_yaml(yml, clu_name, ctrl_node, wrk_node, ctrl_vm, work_vm)
+chng_yaml(yamlfile, yml, clu_name, ctrl_node, wrk_node, ctrl_vm, work_vm)
 print('\n\nYour Create TKC Cluster yaml is updated and ready to go!')
