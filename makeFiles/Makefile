@@ -72,10 +72,6 @@ certman-inst:
 	@helm repo update
 	@helm install cert-manager jetstack/cert-manager --namespace cert-manager \
 	--create-namespace --version $(CERTMAN_VER) --set installCRDs=true
-
-rmq-setenv:
-	@#sets environment for installation of the Tanzu Essentials installation
-	
 	
 tkc-chyaml: chyaml/bin/activate
 	@echo "Let's you name your next cluster to be deleted or created"
