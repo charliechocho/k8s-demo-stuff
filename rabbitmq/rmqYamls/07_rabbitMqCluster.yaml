@@ -48,4 +48,4 @@ spec:
               whenUnsatisfiable: DoNotSchedule
               labelSelector:
                 matchLabels:
-                  app.kubernetes.io/name: production-ready
+                  app.kubernetes.io/name: rmq-clu-1
