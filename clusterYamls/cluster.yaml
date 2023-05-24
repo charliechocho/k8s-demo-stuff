@@ -1,0 +1,39 @@
+apiVersion: run.tanzu.vmware.com/v1alpha3
+kind: TanzuKubernetesCluster
+metadata:
+  name: rabbit-clu
+  namespace: rmq-ns
+spec:
+  topology:
+    controlPlane:
+      replicas: 1
+      vmClass: best-effort-medium
+      storageClass: vc01cl01-t0compute
+      tkr:
+        reference:
+          name: v1.24.9---vmware.1-tkg.4
+      volumes:
+      - name: etcd
+        mountPath: /var/lib/etcd
+        capacity:
+          storage: 4Gi
+    nodePools:
+    - replicas: 3
+      name: worker-np
+      vmClass: best-effort-medium
+      storageClass: vc01cl01-t0compute
+      tkr:
+        reference:
+          name: v1.24.9---vmware.1-tkg.4
+      volumes:
+      - name: containerd
+        mountPath: /var/lib/containerd
+        capacity:
+          storage: 50Gi
+      - name: kubelet
+        mountPath: /var/lib/kubelet
+        capacity:
+          storage: 50Gi
+  settings:
+    storage:
+      defaultClass: vc01cl01-t0compute
