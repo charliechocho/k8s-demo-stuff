@@ -8,3 +8,5 @@ soundtracks.csv
 clusterYamls/clu.yaml
 clusterYamls/clu-lab.yaml
 makeFiles/vmclass.txt
+configYamls/tmc-registration.yaml
+
