@@ -5,5 +5,5 @@ metadata:
   namespace: svc-tmc-c8
 spec:
   operation: INSTALL
-  registrationLink: https://cascmse06.tmc.cloud.vmware.com/installer?id=7e5290a07645466d4b57bfe2b98e7b8812fff0f9ffd37f78ba30f68bbbbc6611&source=registration&type=tkgs
+  registrationLink: https://cascmse06.tmc.cloud.vmware.com/installer?id=272c06f9acb313bb3b7cf53e109de3d3e45ace53e0c0a8e4f6094b85b059946d&source=registration&type=tkgs
 
