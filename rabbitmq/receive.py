@@ -3,7 +3,7 @@
 import pika, sys, os
 
 credentials = pika.PlainCredentials('msoderberg', 'VMware1!')
-parameters = pika.ConnectionParameters('10.220.3.41',
+parameters = pika.ConnectionParameters('10.220.74.6',
                                    5672,
                                    '/',
                                    credentials)
