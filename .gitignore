@@ -5,8 +5,7 @@ spring-music-1/build
 secretScripts
 allmyrecords.csv
 soundtracks.csv
-clusterYamls/clu.yaml
-clusterYamls/clu-lab.yaml
+clusterYamls/*.yaml
 makeFiles/vmclass.txt
 configYamls/tmc-registration.yaml
 
