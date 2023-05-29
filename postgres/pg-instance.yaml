@@ -5,8 +5,7 @@ metadata:
 spec:
   storageClassName: vc01cl01-t0compute
   storageSize: 800M
-  cpu: "0.8"
-  memory: 800Mi
+  sharedMemorySize: 800Mi
   monitorStorageClassName: vc01cl01-t0compute
   monitorStorageSize: 1G
   resources:
