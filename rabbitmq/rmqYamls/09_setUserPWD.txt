@@ -3,3 +3,7 @@
 # * rabbitmqctl add_user username password
 # * rabbitmqctl set_user_tags username administrator
 # * rabbitmqctl set_permissions -p / username ".*" ".*" ".*"
+
+#Default user and password:
+user: default_user_wNSgVBIyMIElsGRrpwb 
+pass: cGvQ6T-5gRt0Rc4C3AdXdXDB43NRS6FJ
