@@ -1,9 +1,17 @@
 #!/usr/local/bin/ python3
 
+import getpass
 import pika, sys, os
 
-credentials = pika.PlainCredentials('user', 'password')
-parameters = pika.ConnectionParameters('10.220.74.6',
+user = input('Enter username for RMQ: ')
+passwd = getpass.getpass('Enter password for RMQ: ')
+
+if not user and passwd:
+	print('User and/or Password not entered\nExiting App!')
+	exit()
+        
+credentials = pika.PlainCredentials(user, passwd)
+parameters = pika.ConnectionParameters('10.220.74.10',
                                    5672,
                                    '/',
                                    credentials)

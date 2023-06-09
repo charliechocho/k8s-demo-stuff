@@ -1,28 +1,40 @@
 #!/usr/local/bin/ python3
 
+import getpass 
 import pika
 from faker import Faker
-names = []
 
-fake = Faker()
+user = input('Enter username for RMQ: ')
+passwd = getpass.getpass('Enter password for RMQ: ')
 
-credentials = pika.PlainCredentials('user', 'password')
-parameters = pika.ConnectionParameters('10.220.74.6',
-                                   5672,
-                                   '/',
-                                   credentials)
+if user and passwd:
+	names = []
+	fake = Faker()
+else:
+	print('User and/or Password not entered\nExiting App!')
+	exit()
 
-connection = pika.BlockingConnection(parameters)
-channel = connection.channel()
+cont = 'y'
+while cont == 'y':
+	credentials = pika.PlainCredentials(user, passwd)
+	parameters = pika.ConnectionParameters('10.220.74.10',
+									5672,
+									'/',
+									credentials)
 
-channel.queue_declare(queue='Tanzu Cities')
+	connection = pika.BlockingConnection(parameters)
+	channel = connection.channel()
 
-for i in range(10):
-	names.append(fake.city())
+	channel.queue_declare(queue='Tanzu Cities')
 
-for fName in names:
-	channel.basic_publish(exchange='',
-                  routing_key='Tanzu Cities',
-                  body=f'{fName}')
-	print(f" [x] Sent {fName}!")
-connection.close()
+	for i in range(10):
+		names.append(fake.city())
+
+	for fName in names:
+		channel.basic_publish(exchange='',
+					routing_key='Tanzu Cities',
+					body=f'{fName}')
+		print(f" [x] Sent {fName}!")
+	connection.close()
+	cont = input('Send more messages?(y/n) ')
+	names = []
