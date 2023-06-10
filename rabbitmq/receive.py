@@ -11,7 +11,7 @@ if not user and passwd:
 	exit()
         
 credentials = pika.PlainCredentials(user, passwd)
-parameters = pika.ConnectionParameters('10.220.74.10',
+parameters = pika.ConnectionParameters('10.220.74.7',
                                    5672,
                                    '/',
                                    credentials)

@@ -17,7 +17,7 @@ else:
 cont = 'y'
 while cont == 'y':
 	credentials = pika.PlainCredentials(user, passwd)
-	parameters = pika.ConnectionParameters('10.220.74.10',
+	parameters = pika.ConnectionParameters('10.220.74.7',
 									5672,
 									'/',
 									credentials)
