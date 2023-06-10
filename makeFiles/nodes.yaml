@@ -1,0 +1,670 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Node
+  metadata:
+    annotations:
+      cluster.x-k8s.io/cluster-name: web-store
+      cluster.x-k8s.io/cluster-namespace: dev-ns
+      cluster.x-k8s.io/machine: web-store-cfkr9-tjlzk
+      cluster.x-k8s.io/owner-kind: KubeadmControlPlane
+      cluster.x-k8s.io/owner-name: web-store-cfkr9
+      csi.volume.kubernetes.io/nodeid: '{"csi.vsphere.vmware.com":"web-store-cfkr9-tjlzk"}'
+      kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/containerd/containerd.sock
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2023-05-29T08:36:56Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      failure-domain.beta.kubernetes.io/zone: vmware-system-legacy
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: web-store-cfkr9-tjlzk
+      kubernetes.io/os: linux
+      node-role.kubernetes.io/control-plane: ""
+      node.kubernetes.io/exclude-from-external-load-balancers: ""
+      run.tanzu.vmware.com/kubernetesDistributionVersion: v1.24.9---vmware.1-tkg.4
+      run.tanzu.vmware.com/tkr: v1.24.9---vmware.1-tkg.4
+      topology.kubernetes.io/zone: vmware-system-legacy
+    name: web-store-cfkr9-tjlzk
+    resourceVersion: "2235728"
+    uid: f598ae80-f3d4-47ea-b66e-6c4ccd988647
+  spec:
+    podCIDR: 192.168.0.0/24
+    podCIDRs:
+    - 192.168.0.0/24
+    providerID: vsphere://4201d331-5279-8a0c-1818-bfbf96090109
+    taints:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/control-plane
+  status:
+    addresses:
+    - address: 10.220.74.17
+      type: InternalIP
+    - address: ""
+      type: Hostname
+    allocatable:
+      cpu: "2"
+      ephemeral-storage: "18847527291"
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 3941772Ki
+      pods: "110"
+    capacity:
+      cpu: "2"
+      ephemeral-storage: 20450876Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 4044172Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2023-06-09T11:53:30Z"
+      lastTransitionTime: "2023-05-29T08:36:55Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:30Z"
+      lastTransitionTime: "2023-05-29T08:36:55Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:30Z"
+      lastTransitionTime: "2023-05-29T08:36:55Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:30Z"
+      lastTransitionTime: "2023-05-29T08:38:39Z"
+      message: kubelet is posting ready status. AppArmor enabled
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - localhost:5000/tkg/packages/core/kapp-controller@sha256:f98272c6e5bc7339fbe193c1d968c839718899517e90c900d22a64d9384f9a30
+      sizeBytes: 260000169
+    - names:
+      - localhost:5000/tkg/packages/core/antrea@sha256:b343617f49eb9273a5926e5c386c1fb58271cabc76dc49dd034b7ab009479a40
+      sizeBytes: 249775443
+    - names:
+      - localhost:5000/vmware.io/etcd:v3.5.6_vmware.3
+      sizeBytes: 140552075
+    - names:
+      - localhost:5000/vmware.io/kube-apiserver:v1.24.9_vmware.1
+      sizeBytes: 131201567
+    - names:
+      - localhost:5000/vmware.io/kube-controller-manager:v1.24.9_vmware.1
+      sizeBytes: 120826517
+    - names:
+      - localhost:5000/vmware.io/kube-proxy:v1.24.9_vmware.1
+      sizeBytes: 112033164
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:c0a67e7da6da057dad7fd0e514a9cdab1949dc5965cce565e43091391466e493
+      sizeBytes: 109462699
+    - names:
+      - localhost:5000/vmware.io/kube-scheduler:v1.24.9_vmware.1
+      sizeBytes: 52422804
+    - names:
+      - docker.io/vmware/docker-registry:2.7.1
+      - docker.io/vmware/docker-registry:latest
+      sizeBytes: 52204438
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:5b9b9eb20059c49bd5439e38f6210847aa5f99a5b993a17fa0fcc0363476780a
+      sizeBytes: 50707353
+    - names:
+      - localhost:5000/vmware.io/coredns:v1.8.6_vmware.15
+      sizeBytes: 45041631
+    - names:
+      - localhost:5000/tkg/packages/core/guest-cluster-auth-service@sha256:063ce1b64fa830c2a8d5781e79bec5e52dfdc1803fc8eb82c62247cf595b7431
+      sizeBytes: 24490838
+    - names:
+      - localhost:5000/tkg/packages/capabilities@sha256:8ed66eeedefde920f3f8359bc0f11d9e92d67b4c4bbb7bd46e60006d6a28b2a1
+      sizeBytes: 23453773
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-cpi@sha256:e761d71f2aca74886e993bef84f4e5aa5fddc4ce684c9b342f560be044628583
+      sizeBytes: 17487080
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:49f62c1506547c5d581a5358f0f58c62df510bbca38aa70549fd31d7574b767e
+      sizeBytes: 12665004
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:13a6db244ee48a467916dc2cc3cb5e77738cad06fef717bf07f6b1870664d1ac
+      sizeBytes: 12138100
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:3317154e3d03a88fb847c79762d3dab79d157000a13e4e1095174d5b7f6bf948
+      sizeBytes: 12015276
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:4b882161a321bcf396c178cdcefc0a936e5bb1ee2982668ffd2e5cf788b6f4a9
+      sizeBytes: 5401709
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:1d5a0ee800b86b1b707c5bd96afbedaeeddf2372af62de9372b9ab78a3eb768b
+      sizeBytes: 4921913
+    - names:
+      - localhost:5000/vmware.io/pause:3.7
+      sizeBytes: 747378
+    nodeInfo:
+      architecture: amd64
+      bootID: 5a2fc839-8ab4-4b65-83ea-bcb53335c59d
+      containerRuntimeVersion: containerd://1.6.6
+      kernelVersion: 4.19.277-2.ph3-esx
+      kubeProxyVersion: v1.24.9+vmware.1
+      kubeletVersion: v1.24.9+vmware.1
+      machineID: 357ba07cf8a24dac9ac8d08b81971397
+      operatingSystem: linux
+      osImage: VMware Photon OS/Linux
+      systemUUID: 31d30142-7952-0c8a-1818-bfbf96090109
+- apiVersion: v1
+  kind: Node
+  metadata:
+    annotations:
+      cluster.x-k8s.io/cluster-name: web-store
+      cluster.x-k8s.io/cluster-namespace: dev-ns
+      cluster.x-k8s.io/machine: web-store-worker-np-8fkcm-8d8444bfb-fjkrr
+      cluster.x-k8s.io/owner-kind: MachineSet
+      cluster.x-k8s.io/owner-name: web-store-worker-np-8fkcm-8d8444bfb
+      csi.volume.kubernetes.io/nodeid: '{"csi.vsphere.vmware.com":"web-store-worker-np-8fkcm-8d8444bfb-fjkrr"}'
+      kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/containerd/containerd.sock
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2023-05-29T08:39:11Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      failure-domain.beta.kubernetes.io/zone: vmware-system-legacy
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: web-store-worker-np-8fkcm-8d8444bfb-fjkrr
+      kubernetes.io/os: linux
+      run.tanzu.vmware.com/kubernetesDistributionVersion: v1.24.9---vmware.1-tkg.4
+      run.tanzu.vmware.com/tkr: v1.24.9---vmware.1-tkg.4
+      topology.kubernetes.io/zone: vmware-system-legacy
+    name: web-store-worker-np-8fkcm-8d8444bfb-fjkrr
+    resourceVersion: "2235681"
+    uid: e15bddcf-78d9-4d3d-8d22-311481dc32bb
+  spec:
+    podCIDR: 192.168.2.0/24
+    podCIDRs:
+    - 192.168.2.0/24
+    providerID: vsphere://4201a211-38c6-2ed7-bcef-ea5a213e57a8
+  status:
+    addresses:
+    - address: 10.220.74.21
+      type: InternalIP
+    - address: ""
+      type: Hostname
+    allocatable:
+      cpu: "2"
+      ephemeral-storage: "47268447359"
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 3941772Ki
+      pods: "110"
+    capacity:
+      cpu: "2"
+      ephemeral-storage: 51289548Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 4044172Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2023-06-09T11:53:20Z"
+      lastTransitionTime: "2023-05-29T08:39:11Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:20Z"
+      lastTransitionTime: "2023-05-29T08:39:11Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:20Z"
+      lastTransitionTime: "2023-05-29T08:39:11Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:20Z"
+      lastTransitionTime: "2023-05-29T08:39:32Z"
+      message: kubelet is posting ready status. AppArmor enabled
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - docker.io/openstorage/stork@sha256:e98f992fa6a2714b896423502fce6a916cfbe0ab3cea54013603af7edaa44a5a
+      - docker.io/openstorage/stork:23.3.1
+      sizeBytes: 911780485
+    - names:
+      - localhost:5000/tkg/packages/core/antrea@sha256:b343617f49eb9273a5926e5c386c1fb58271cabc76dc49dd034b7ab009479a40
+      sizeBytes: 249775443
+    - names:
+      - localhost:5000/vmware.io/etcd:v3.5.6_vmware.3
+      sizeBytes: 140552075
+    - names:
+      - localhost:5000/vmware.io/kube-apiserver:v1.24.9_vmware.1
+      sizeBytes: 131201567
+    - names:
+      - gcr.io/google-samples/microservices-demo/recommendationservice@sha256:d7f941793c91f91be507dbfa6fe68e5c23cbcb99d6b4e3f65235e1087865cd13
+      - gcr.io/google-samples/microservices-demo/recommendationservice:v0.1.2
+      sizeBytes: 129270521
+    - names:
+      - localhost:5000/vmware.io/kube-controller-manager:v1.24.9_vmware.1
+      sizeBytes: 120826517
+    - names:
+      - localhost:5000/vmware.io/kube-proxy:v1.24.9_vmware.1
+      sizeBytes: 112033164
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:c0a67e7da6da057dad7fd0e514a9cdab1949dc5965cce565e43091391466e493
+      sizeBytes: 109462699
+    - names:
+      - gcr.io/google-samples/microservices-demo/emailservice@sha256:dd921adf59bb848a084a43e1161d608f43096f0692b1678854c033ed87c91752
+      - gcr.io/google-samples/microservices-demo/emailservice:v0.1.2
+      sizeBytes: 106227172
+    - names:
+      - quay.io/gravitational/teleport@sha256:35cbd865c319f605ca8f7b22d4403e7bb72501029e30a0d91589bd3b18cc2eb1
+      - quay.io/gravitational/teleport:8.3.21
+      sizeBytes: 101495612
+    - names:
+      - gcr.io/google-samples/microservices-demo/cartservice@sha256:4e9c6ad41328210e0a4b181add097d60900ecc1b990527a832a5d47e3f209d69
+      - gcr.io/google-samples/microservices-demo/cartservice:v0.1.2
+      sizeBytes: 62565526
+    - names:
+      - localhost:5000/vmware.io/kube-scheduler:v1.24.9_vmware.1
+      sizeBytes: 52422804
+    - names:
+      - docker.io/vmware/docker-registry:2.7.1
+      - docker.io/vmware/docker-registry:latest
+      sizeBytes: 52204438
+    - names:
+      - gcr.io/google-samples/microservices-demo/currencyservice@sha256:52818623cf85b8a0f01709b06ce94bde44b9ee27203c35b832663f55cde1fe83
+      - gcr.io/google-samples/microservices-demo/currencyservice:v0.1.2
+      sizeBytes: 45794669
+    - names:
+      - localhost:5000/vmware.io/coredns:v1.8.6_vmware.15
+      sizeBytes: 45041631
+    - names:
+      - registry.k8s.io/kube-scheduler-amd64@sha256:0c8209dd7b5b249aac8baa94056630d46d0e0cfd8a49b762e01ee8f159139232
+      - registry.k8s.io/kube-scheduler-amd64:v1.24.9
+      sizeBytes: 15505154
+    - names:
+      - gcr.io/google-samples/microservices-demo/productcatalogservice@sha256:5bed3e74f613713a943207f2baf166ce9f03fe4df27f819a719393351cf84d1c
+      - gcr.io/google-samples/microservices-demo/productcatalogservice:v0.1.2
+      sizeBytes: 14907724
+    - names:
+      - gcr.io/google-samples/microservices-demo/shippingservice@sha256:ed43c1e9c515ec440e95d99357e91087d92a1ecc9b9ed799335b4b9e147c1248
+      - gcr.io/google-samples/microservices-demo/shippingservice:v0.1.2
+      sizeBytes: 14868572
+    - names:
+      - gcr.io/google-samples/microservices-demo/checkoutservice@sha256:b6ec530b4ef237600a2ecb04054fe7d5d1b377c113cc927c87c5f8cd734a73fe
+      - gcr.io/google-samples/microservices-demo/checkoutservice:v0.1.2
+      sizeBytes: 14846135
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:4b882161a321bcf396c178cdcefc0a936e5bb1ee2982668ffd2e5cf788b6f4a9
+      sizeBytes: 5401709
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:1d5a0ee800b86b1b707c5bd96afbedaeeddf2372af62de9372b9ab78a3eb768b
+      sizeBytes: 4921913
+    - names:
+      - localhost:5000/vmware.io/pause:3.7
+      sizeBytes: 747378
+    nodeInfo:
+      architecture: amd64
+      bootID: 2d8461c2-e069-4e72-9e0c-6d30a8101592
+      containerRuntimeVersion: containerd://1.6.6
+      kernelVersion: 4.19.277-2.ph3-esx
+      kubeProxyVersion: v1.24.9+vmware.1
+      kubeletVersion: v1.24.9+vmware.1
+      machineID: 607ed236d97a44869bdd858240abcd29
+      operatingSystem: linux
+      osImage: VMware Photon OS/Linux
+      systemUUID: 11a20142-c638-d72e-bcef-ea5a213e57a8
+- apiVersion: v1
+  kind: Node
+  metadata:
+    annotations:
+      cluster.x-k8s.io/cluster-name: web-store
+      cluster.x-k8s.io/cluster-namespace: dev-ns
+      cluster.x-k8s.io/machine: web-store-worker-np-8fkcm-8d8444bfb-rtnhp
+      cluster.x-k8s.io/owner-kind: MachineSet
+      cluster.x-k8s.io/owner-name: web-store-worker-np-8fkcm-8d8444bfb
+      csi.volume.kubernetes.io/nodeid: '{"csi.vsphere.vmware.com":"web-store-worker-np-8fkcm-8d8444bfb-rtnhp"}'
+      kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/containerd/containerd.sock
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2023-05-29T08:38:57Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      failure-domain.beta.kubernetes.io/zone: vmware-system-legacy
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: web-store-worker-np-8fkcm-8d8444bfb-rtnhp
+      kubernetes.io/os: linux
+      run.tanzu.vmware.com/kubernetesDistributionVersion: v1.24.9---vmware.1-tkg.4
+      run.tanzu.vmware.com/tkr: v1.24.9---vmware.1-tkg.4
+      topology.kubernetes.io/zone: vmware-system-legacy
+    name: web-store-worker-np-8fkcm-8d8444bfb-rtnhp
+    resourceVersion: "2235596"
+    uid: 672ac644-e406-4359-9123-6c1840d3c507
+  spec:
+    podCIDR: 192.168.1.0/24
+    podCIDRs:
+    - 192.168.1.0/24
+    providerID: vsphere://4201d6fc-fdb3-3244-c9dd-7e4dc1e1d275
+  status:
+    addresses:
+    - address: 10.220.74.16
+      type: InternalIP
+    - address: ""
+      type: Hostname
+    allocatable:
+      cpu: "2"
+      ephemeral-storage: "47268447359"
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 3941788Ki
+      pods: "110"
+    capacity:
+      cpu: "2"
+      ephemeral-storage: 51289548Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 4044188Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2023-06-09T11:53:04Z"
+      lastTransitionTime: "2023-05-29T08:38:57Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:04Z"
+      lastTransitionTime: "2023-05-29T08:38:57Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:04Z"
+      lastTransitionTime: "2023-05-29T08:38:57Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:04Z"
+      lastTransitionTime: "2023-05-29T08:39:28Z"
+      message: kubelet is posting ready status. AppArmor enabled
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - docker.io/openstorage/stork@sha256:e98f992fa6a2714b896423502fce6a916cfbe0ab3cea54013603af7edaa44a5a
+      - docker.io/openstorage/stork:23.3.1
+      sizeBytes: 911780485
+    - names:
+      - localhost:5000/tkg/packages/core/antrea@sha256:b343617f49eb9273a5926e5c386c1fb58271cabc76dc49dd034b7ab009479a40
+      sizeBytes: 249775443
+    - names:
+      - gcr.io/google-samples/microservices-demo/adservice@sha256:e2a6a1d6815aca3b04cd818d5342ea2520266926c539db26f1542cb43d1e25bc
+      - gcr.io/google-samples/microservices-demo/adservice:v0.3.5
+      sizeBytes: 182888526
+    - names:
+      - localhost:5000/vmware.io/etcd:v3.5.6_vmware.3
+      sizeBytes: 140552075
+    - names:
+      - localhost:5000/vmware.io/kube-apiserver:v1.24.9_vmware.1
+      sizeBytes: 131201567
+    - names:
+      - localhost:5000/vmware.io/kube-controller-manager:v1.24.9_vmware.1
+      sizeBytes: 120826517
+    - names:
+      - localhost:5000/vmware.io/kube-proxy:v1.24.9_vmware.1
+      sizeBytes: 112033164
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:c0a67e7da6da057dad7fd0e514a9cdab1949dc5965cce565e43091391466e493
+      sizeBytes: 109462699
+    - names:
+      - gcr.io/google-samples/microservices-demo/loadgenerator@sha256:02b024e94b5c85cf9bb28e3861fe63e38f3ca0e45609726a6a0ef00b5b4034b3
+      - gcr.io/google-samples/microservices-demo/loadgenerator:v0.1.2
+      sizeBytes: 63371335
+    - names:
+      - docker.io/bitnami/external-dns@sha256:97bc08f55541aaceb55139496103f292be383ee9c114d96484b2d20522428252
+      - docker.io/bitnami/external-dns:0.13.2-debian-11-r11
+      sizeBytes: 55811275
+    - names:
+      - localhost:5000/vmware.io/kube-scheduler:v1.24.9_vmware.1
+      sizeBytes: 52422804
+    - names:
+      - docker.io/vmware/docker-registry:2.7.1
+      - docker.io/vmware/docker-registry:latest
+      sizeBytes: 52204438
+    - names:
+      - gcr.io/google-samples/microservices-demo/paymentservice@sha256:509bff857bd6f2db727cb50322ed0de6a62bddd82ffad35c9603ac4d98acbc3f
+      - gcr.io/google-samples/microservices-demo/paymentservice:v0.1.2
+      sizeBytes: 45182038
+    - names:
+      - localhost:5000/vmware.io/coredns:v1.8.6_vmware.15
+      sizeBytes: 45041631
+    - names:
+      - localhost:5000/tkg/packages/core/metrics-server@sha256:a1ba061d6d46fa34a526690998380515583dc0f9c9dce3ea3b5aac2ac020c4c0
+      sizeBytes: 29068608
+    - names:
+      - localhost:5000/tkg/packages/core/secretgen-controller@sha256:b373d19a7c417193effcb31713ab7ec748b4bd79f82603b894db84ab11600935
+      sizeBytes: 22967187
+    - names:
+      - gcr.io/google-samples/microservices-demo/frontend@sha256:899072f7f60c00c24de0bda1c505a91e4c330826e4e266d650e3d7e52debfe07
+      - gcr.io/google-samples/microservices-demo/frontend:v0.1.2
+      sizeBytes: 16020555
+    - names:
+      - registry.k8s.io/kube-scheduler-amd64@sha256:0c8209dd7b5b249aac8baa94056630d46d0e0cfd8a49b762e01ee8f159139232
+      - registry.k8s.io/kube-scheduler-amd64:v1.24.9
+      sizeBytes: 15505154
+    - names:
+      - msodreg.azurecr.io/redis@sha256:397a218ebdce35d1a7bc1d33cc11ae43d31c1ec7afec63192ede92d3dfebcd7b
+      - msodreg.azurecr.io/redis:alpine
+      sizeBytes: 13334609
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:4b882161a321bcf396c178cdcefc0a936e5bb1ee2982668ffd2e5cf788b6f4a9
+      sizeBytes: 5401709
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:1d5a0ee800b86b1b707c5bd96afbedaeeddf2372af62de9372b9ab78a3eb768b
+      sizeBytes: 4921913
+    - names:
+      - msodreg.azurecr.io/alpine@sha256:36c3a913e62f77a82582eb7ce30d255f805c3d1e11d58e1f805e14d33c2bc5a5
+      - msodreg.azurecr.io/alpine:3.6
+      sizeBytes: 2019814
+    - names:
+      - localhost:5000/vmware.io/pause:3.7
+      sizeBytes: 747378
+    nodeInfo:
+      architecture: amd64
+      bootID: 6027bff9-9922-4620-9a88-f270cce72878
+      containerRuntimeVersion: containerd://1.6.6
+      kernelVersion: 4.19.277-2.ph3-esx
+      kubeProxyVersion: v1.24.9+vmware.1
+      kubeletVersion: v1.24.9+vmware.1
+      machineID: db08f9e9bb8047e69360508bf300a1a3
+      operatingSystem: linux
+      osImage: VMware Photon OS/Linux
+      systemUUID: fcd60142-b3fd-4432-c9dd-7e4dc1e1d275
+- apiVersion: v1
+  kind: Node
+  metadata:
+    annotations:
+      cluster.x-k8s.io/cluster-name: web-store
+      cluster.x-k8s.io/cluster-namespace: dev-ns
+      cluster.x-k8s.io/machine: web-store-worker-np-8fkcm-8d8444bfb-wlbc2
+      cluster.x-k8s.io/owner-kind: MachineSet
+      cluster.x-k8s.io/owner-name: web-store-worker-np-8fkcm-8d8444bfb
+      csi.volume.kubernetes.io/nodeid: '{"csi.vsphere.vmware.com":"web-store-worker-np-8fkcm-8d8444bfb-wlbc2"}'
+      kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/containerd/containerd.sock
+      node.alpha.kubernetes.io/ttl: "0"
+      volumes.kubernetes.io/controller-managed-attach-detach: "true"
+    creationTimestamp: "2023-06-09T08:19:17Z"
+    labels:
+      beta.kubernetes.io/arch: amd64
+      beta.kubernetes.io/os: linux
+      failure-domain.beta.kubernetes.io/zone: vmware-system-legacy
+      kubernetes.io/arch: amd64
+      kubernetes.io/hostname: web-store-worker-np-8fkcm-8d8444bfb-wlbc2
+      kubernetes.io/os: linux
+      run.tanzu.vmware.com/kubernetesDistributionVersion: v1.24.9---vmware.1-tkg.4
+      run.tanzu.vmware.com/tkr: v1.24.9---vmware.1-tkg.4
+      topology.kubernetes.io/zone: vmware-system-legacy
+    name: web-store-worker-np-8fkcm-8d8444bfb-wlbc2
+    resourceVersion: "2235712"
+    uid: 1d04ac1c-8b5b-4608-86aa-81ce61337475
+  spec:
+    podCIDR: 192.168.3.0/24
+    podCIDRs:
+    - 192.168.3.0/24
+    providerID: vsphere://4201cedf-bc31-c7e3-5ed1-46e1c7d04cfc
+  status:
+    addresses:
+    - address: 10.220.74.25
+      type: InternalIP
+    - address: ""
+      type: Hostname
+    allocatable:
+      cpu: "2"
+      ephemeral-storage: "47268447359"
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 3941788Ki
+      pods: "110"
+    capacity:
+      cpu: "2"
+      ephemeral-storage: 51289548Ki
+      hugepages-1Gi: "0"
+      hugepages-2Mi: "0"
+      memory: 4044188Ki
+      pods: "110"
+    conditions:
+    - lastHeartbeatTime: "2023-06-09T11:53:26Z"
+      lastTransitionTime: "2023-06-09T08:19:17Z"
+      message: kubelet has sufficient memory available
+      reason: KubeletHasSufficientMemory
+      status: "False"
+      type: MemoryPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:26Z"
+      lastTransitionTime: "2023-06-09T08:19:17Z"
+      message: kubelet has no disk pressure
+      reason: KubeletHasNoDiskPressure
+      status: "False"
+      type: DiskPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:26Z"
+      lastTransitionTime: "2023-06-09T08:19:17Z"
+      message: kubelet has sufficient PID available
+      reason: KubeletHasSufficientPID
+      status: "False"
+      type: PIDPressure
+    - lastHeartbeatTime: "2023-06-09T11:53:26Z"
+      lastTransitionTime: "2023-06-09T08:19:48Z"
+      message: kubelet is posting ready status. AppArmor enabled
+      reason: KubeletReady
+      status: "True"
+      type: Ready
+    daemonEndpoints:
+      kubeletEndpoint:
+        Port: 10250
+    images:
+    - names:
+      - docker.io/openstorage/stork@sha256:e98f992fa6a2714b896423502fce6a916cfbe0ab3cea54013603af7edaa44a5a
+      - docker.io/openstorage/stork:23.3.1
+      sizeBytes: 911780485
+    - names:
+      - localhost:5000/tkg/packages/core/antrea@sha256:b343617f49eb9273a5926e5c386c1fb58271cabc76dc49dd034b7ab009479a40
+      sizeBytes: 249775443
+    - names:
+      - localhost:5000/vmware.io/etcd:v3.5.6_vmware.3
+      sizeBytes: 140552075
+    - names:
+      - localhost:5000/vmware.io/kube-apiserver:v1.24.9_vmware.1
+      sizeBytes: 131201567
+    - names:
+      - localhost:5000/vmware.io/kube-controller-manager:v1.24.9_vmware.1
+      sizeBytes: 120826517
+    - names:
+      - localhost:5000/vmware.io/kube-proxy:v1.24.9_vmware.1
+      sizeBytes: 112033164
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:c0a67e7da6da057dad7fd0e514a9cdab1949dc5965cce565e43091391466e493
+      sizeBytes: 109462699
+    - names:
+      - quay.io/gravitational/teleport@sha256:35cbd865c319f605ca8f7b22d4403e7bb72501029e30a0d91589bd3b18cc2eb1
+      - quay.io/gravitational/teleport:8.3.21
+      sizeBytes: 101495612
+    - names:
+      - docker.io/bitnami/external-dns@sha256:97bc08f55541aaceb55139496103f292be383ee9c114d96484b2d20522428252
+      - docker.io/bitnami/external-dns:0.13.2-debian-11-r11
+      sizeBytes: 55811275
+    - names:
+      - localhost:5000/vmware.io/kube-scheduler:v1.24.9_vmware.1
+      sizeBytes: 52422804
+    - names:
+      - docker.io/vmware/docker-registry:2.7.1
+      - docker.io/vmware/docker-registry:latest
+      sizeBytes: 52204438
+    - names:
+      - localhost:5000/vmware.io/coredns:v1.8.6_vmware.15
+      sizeBytes: 45041631
+    - names:
+      - docker.io/portworx/pds-agent@sha256:df5f7decb1023c13050f2e1ce42b71b785721b71621d5c148de532cf9d4d53f7
+      - docker.io/portworx/pds-agent:dev-b13e6a9
+      sizeBytes: 37827394
+    - names:
+      - docker.io/portworx/pds-operator-backup@sha256:ddb157dfe2d47e29187df0f2449b219964e3af49acc8473637d80822a6441dca
+      - docker.io/portworx/pds-operator-backup:dev-f9c44c0
+      sizeBytes: 30093261
+    - names:
+      - docker.io/portworx/pds-operator-target@sha256:99851ad50954e9fad138f350fcca4ee26189fcafdd2e5c3b470c7802bf3cc09f
+      - docker.io/portworx/pds-operator-target:dev-8bc7ec2
+      sizeBytes: 26571523
+    - names:
+      - docker.io/portworx/kube-rbac-proxy@sha256:18f12fc3a0085bbc303cfbd2ad1151127c1c959c4641e36027547b6b66eb4c92
+      - docker.io/portworx/kube-rbac-proxy:v0.13.1
+      sizeBytes: 24473563
+    - names:
+      - docker.io/portworx/pds-operator-deployment@sha256:51f14d30f3516278cee7a62e3c28d5e5cda84ce2591dbcd0e73661353bc73164
+      - docker.io/portworx/pds-operator-deployment:dev-8944b1d
+      sizeBytes: 23648796
+    - names:
+      - registry.k8s.io/kube-scheduler-amd64@sha256:0c8209dd7b5b249aac8baa94056630d46d0e0cfd8a49b762e01ee8f159139232
+      - registry.k8s.io/kube-scheduler-amd64:v1.24.9
+      sizeBytes: 15505154
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:4b882161a321bcf396c178cdcefc0a936e5bb1ee2982668ffd2e5cf788b6f4a9
+      sizeBytes: 5401709
+    - names:
+      - localhost:5000/tkg/packages/core/vsphere-pv-csi@sha256:1d5a0ee800b86b1b707c5bd96afbedaeeddf2372af62de9372b9ab78a3eb768b
+      sizeBytes: 4921913
+    - names:
+      - localhost:5000/vmware.io/pause:3.7
+      sizeBytes: 747378
+    nodeInfo:
+      architecture: amd64
+      bootID: 35e54d8c-0795-4173-9a98-13fdf95381d5
+      containerRuntimeVersion: containerd://1.6.6
+      kernelVersion: 4.19.277-2.ph3-esx
+      kubeProxyVersion: v1.24.9+vmware.1
+      kubeletVersion: v1.24.9+vmware.1
+      machineID: d106ac5fc74247e0a8f993df0c64b7db
+      operatingSystem: linux
+      osImage: VMware Photon OS/Linux
+      systemUUID: dfce0142-31bc-e3c7-5ed1-46e1c7d04cfc
+kind: List
+metadata:
+  resourceVersion: ""
