@@ -11,10 +11,10 @@ else ifeq ($(USER), admin)
  	PASSWD ?= $(SUPERVISOR_PASSWORD)
  	CLU_USER ?= $(ADMIN_USER)
 else ifeq ($(USER), lab_admin)
-	PASSWD ?= $(LAB_SUPER_PWD)
-	CLU_USER ?= $(ADMIN_USER)
+	PASSWD ?= $(LAB_PWD)
+	CLU_USER ?= $(LAB_ADMIN)
 else ifeq ($(USER), lab_user)
-	PASSWD ?= $(LAB_USER_PWD)
+	PASSWD ?= $(LAB_PWD)
 	CLU_USER ?= $(LAB_USER)
 endif
 
