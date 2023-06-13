@@ -1,22 +1,17 @@
 #!/usr/local/bin/ python3
 
-import getpass
+from app_tasks import check_ip, check_user, login_user
 import pika, sys, os
 
-user = input('Enter username for RMQ: ')
-passwd = getpass.getpass('Enter password for RMQ: ')
+def connect_rmq(user, passwd, ipadr):        
+    credentials = pika.PlainCredentials(user, passwd)
+    parameters = pika.ConnectionParameters(ipadr,
+                                    5672,
+                                    '/',
+                                    credentials)
+    return parameters
 
-if not user and passwd:
-	print('User and/or Password not entered\nExiting App!')
-	exit()
-        
-credentials = pika.PlainCredentials(user, passwd)
-parameters = pika.ConnectionParameters('10.220.74.8',
-                                   5672,
-                                   '/',
-                                   credentials)
-
-def main():
+def main(parameters):
     connection = pika.BlockingConnection(parameters)
     channel = connection.channel()
 
@@ -30,9 +25,15 @@ def main():
     print(' [*] Waiting for messages! To exit press CTRL+C')
     channel.start_consuming()
 
+
+result = check_ip()
+user, passwd, ipadr = login_user(str(result))
+check_user(user, passwd)
+parameters = connect_rmq(user, passwd, ipadr)
+
 if __name__ == '__main__':
     try:
-        main()
+        main(parameters)
     except KeyboardInterrupt:
         print('Interrupted')
         try:
