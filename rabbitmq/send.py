@@ -10,12 +10,8 @@ cont = 'y'
 def create_msg(user, passwd, ipadr, cont = 'y', names = []):
 	while cont == 'y':
 		credentials = pika.PlainCredentials(user, passwd)
-		parameters = pika.ConnectionParameters(ipadr,
-										5672,
-										'/',
-										credentials)
-
-		
+		parameters = pika.ConnectionParameters(ipadr, 5672, '/', credentials)
+										
 		try:
 			connection = pika.BlockingConnection(parameters)
 			channel = connection.channel()

@@ -5,16 +5,22 @@ import pika, sys, os
 
 def connect_rmq(user, passwd, ipadr):        
     credentials = pika.PlainCredentials(user, passwd)
-    parameters = pika.ConnectionParameters(ipadr,
-                                    5672,
-                                    '/',
-                                    credentials)
+    parameters = pika.ConnectionParameters(ipadr, 5672, '/', credentials)
     return parameters
 
 def main(parameters):
-    connection = pika.BlockingConnection(parameters)
-    channel = connection.channel()
-
+    try:
+        connection = pika.BlockingConnection(parameters)
+        channel = connection.channel()
+    except pika.exceptions.ProbableAuthenticationError:
+        print(
+		'''
+		It seems you might have entered the wrong user or password!
+		Make sure you have the right credentials and try again!
+		'''
+			)
+        exit()
+                
     channel.queue_declare(queue='Tanzu Cities')
 
     def callback(ch, method, properties, body):
