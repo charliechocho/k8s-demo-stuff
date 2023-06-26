@@ -7,4 +7,4 @@ spec:
   packageRef:
     refName: rabbitmq.tanzu.vmware.com
     versionSelection:
-      constraints: 1.4.1 # Replace with release version
+      constraints: 1.4.2 # Replace with release version

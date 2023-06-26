@@ -5,4 +5,4 @@ metadata:
 spec:
   fetch:
     imgpkgBundle:
-      image: registry.tanzu.vmware.com/p-rabbitmq-for-kubernetes/tanzu-rabbitmq-package-repo:1.4.1 # Replace BUNDLE_VERSION with the release version and replace registry.tanzu.vmware.com with your own registry url if the package is placed in another location
+      image: registry.tanzu.vmware.com/p-rabbitmq-for-kubernetes/tanzu-rabbitmq-package-repo:1.4.2 # Replace BUNDLE_VERSION with the release version and replace registry.tanzu.vmware.com with your own registry url if the package is placed in another location
