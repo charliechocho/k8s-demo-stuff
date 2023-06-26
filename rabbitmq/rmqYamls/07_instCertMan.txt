@@ -1,0 +1,2 @@
+#run make command from makefile directory to install certmanager
+make certman-inst
