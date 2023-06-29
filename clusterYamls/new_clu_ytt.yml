@@ -1,0 +1,38 @@
+apiVersion: run.tanzu.vmware.com/v1alpha3
+kind: TanzuKubernetesCluster
+metadata:
+  name: web-shop2
+spec:
+  settings:
+    storage:
+      defaultClass: vc01cl01-t0compute
+  topology:
+    controlPlane:
+      replicas: 1
+      storageClass: vc01cl01-t0compute
+      tkr:
+        reference:
+          name: v1.23.8---vmware.1-tkg.4
+      vmClass: best-effort-small
+      volumes:
+      - capacity:
+          storage: 4Gi
+        mountPath: /var/lib/etcd
+        name: etcd
+    nodePools:
+    - name: worker-np
+      replicas: 3
+      storageClass: vc01cl01-t0compute
+      tkr:
+        reference:
+          name: v1.23.8---vmware.1-tkg.4
+      vmClass: best-effort-medium
+      volumes:
+      - capacity:
+          storage: 50Gi
+        mountPath: /var/lib/containerd
+        name: containerd
+      - capacity:
+          storage: 50Gi
+        mountPath: /var/lib/kubelet
+        name: kubelet
