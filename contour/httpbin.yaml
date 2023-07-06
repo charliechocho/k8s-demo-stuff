@@ -1,0 +1,62 @@
+apiVersion: v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"httpbin"},"name":"httpbin","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"httpbin"}},"template":{"metadata":{"labels":{"app":"httpbin"}},"spec":{"containers":[{"image":"docker.io/kennethreitz/httpbin","name":"httpbin"}]}}}}
+    labels:
+      app: httpbin
+    name: httpbin
+    namespace: default
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: httpbin
+    template:
+      metadata:
+        labels:
+          app: httpbin
+      spec:
+        containers:
+        - image: registry.tanzu.dk/msoderberg/httpbin 
+          name: httpbin
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"httpbin"},"name":"httpbin","namespace":"default"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"httpbin"},"sessionAffinity":"None","type":"ClusterIP"}}
+    labels:
+      app: httpbin
+    name: httpbin
+    namespace: default
+  spec:
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: httpbin
+    sessionAffinity: None
+    type: ClusterIP
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"labels":{"app":"httpbin"},"name":"httpbin","namespace":"default"},"spec":{"defaultBackend":{"service":{"name":"httpbin","port":{"number":80}}}}}
+    labels:
+      app: httpbin
+    name: httpbin
+    namespace: default
+  spec:
+    defaultBackend:
+      service:
+        name: httpbin
+        port:
+          number: 80
+kind: List
+metadata: {}
