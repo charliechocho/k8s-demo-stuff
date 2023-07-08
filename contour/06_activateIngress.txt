@@ -1,0 +1,3 @@
+# To be able to test the ingress you need to port forward to the envoy service
+
+kubectl -n tanzu-system-ingress port-forward service/envoy 8888:80

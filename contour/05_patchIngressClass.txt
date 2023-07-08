@@ -1,0 +1,5 @@
+# To patch the ingress so it will make use of the contour Ingress
+
+kubectl patch ingress httpbin -p '{"spec":{"ingressClassName": "contour"}}'
+
+
