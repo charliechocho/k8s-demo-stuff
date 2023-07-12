@@ -6,14 +6,17 @@ import vmcl_parser
 #Clear the screen and ask for lab env before starting the process
 os.system('clear')
 labenv = input('What environment will you use (LAB or H2O): ')
+tkr_os = input('What node OS version do you want \
+Ubuntu or Photon (press enter for Photon): ') \
+                     or 'photon'
 
 #put lab or h2o cluster yaml in variable and ask for cluster name
 if labenv.lower() == 'h2o':
-    yamlfile = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu.yaml'
+    yamlfile = f'/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu-{tkr_os.lower()}.yaml'
 else:
-    yamlfile = '/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu-lab.yaml'
-verlist = {}
+    yamlfile = f'/Users/msoderberg/h2o/k8s-demo-stuff/clusterYamls/clu-lab-{tkr_os.lower()}.yaml'
 
+verlist = {}
 clu_name = input('What name do you want for your cluster?: ')
 
 #check if a valid cluster name given, if so ask for number of controllers and workers
