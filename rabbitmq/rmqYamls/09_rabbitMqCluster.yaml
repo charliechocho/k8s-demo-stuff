@@ -34,7 +34,7 @@ spec:
       disk_free_limit.relative = 1.0
       collect_statistics_interval = 10000
   persistence:
-    storageClassName: vsphere-with-tanzu-storage-policy
+    storageClassName: vc01cl01-t0compute
     storage: 5Gi
   override:
     statefulSet:
