@@ -76,14 +76,14 @@ certman-inst:
 tkc-chyaml: chyaml/bin/activate
 	@echo "Let's you name your next cluster to be deleted or created"
 	@# assumes you have the clu.yaml file prepped 
-	@# In order to run this you need a Python Venv(Virtual environment) craeted in the working directory
+	@# In order to run this you need a Python Venv(Virtual environment) created in the working directory
 	@# of the Makefile. This is done by writing this command:
 	@# </> python3 -m venv chyaml </> 
 	@# </> source chyaml/bin/activate </> 
 	@# Then install the requirements in the requirements.txt file like this:
 	@# </> pip install -r requirements.txt </> - This is to install the PyYaml module
 	@# You also need to change the path to the clu.yaml file for the filenam vaiable in the python code.
-	@./chyaml/bin/python3 tkc-chngname.py
+	@python3 tkc-chngname.py
 
 
 	
