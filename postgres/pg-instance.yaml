@@ -2,9 +2,10 @@ apiVersion: sql.tanzu.vmware.com/v1
 kind: Postgres
 metadata:
   name: mattias-db-instance
+  namespace: pg-db
 spec:
   storageClassName: vc01cl01-t0compute
-  storageSize: 800M
+  storageSize: 2Gi
   sharedMemorySize: 800Mi
   monitorStorageClassName: vc01cl01-t0compute
   monitorStorageSize: 1G
