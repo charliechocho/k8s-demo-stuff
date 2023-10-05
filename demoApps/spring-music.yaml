@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: spring-music
-          image: registry.tanzu.dk/music-reg/spring-music:0.12
+          image: registry.tanzu.dk/spring-music/musicreg:0.13
           terminationMessagePolicy: FallbackToLogsOnError
           imagePullPolicy: Always 
           command: ['/app/start.sh']
