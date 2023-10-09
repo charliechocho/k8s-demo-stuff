@@ -9,6 +9,7 @@ clusterYamls/*.yaml
 makeFiles/vmclass.txt
 configYamls/tmc-registration.yaml
 postgres/postgres-for-kubernetes-v2.2.0
+postgres/postgres-for-kubernetes-v2.1.0
 rabbitmq/config.json
 makeFiles/__pycache__/
 rabbitmq/__pycache__/
