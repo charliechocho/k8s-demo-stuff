@@ -14,4 +14,4 @@ rabbitmq/config.json
 makeFiles/__pycache__/
 rabbitmq/__pycache__/
 buildservice-install/
-
+postgres/02_pgSecret.sh
