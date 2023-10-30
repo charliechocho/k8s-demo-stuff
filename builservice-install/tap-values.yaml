@@ -1,0 +1,17 @@
+ceip_policy_disclosed: true
+profile: buildservice
+buildservice:
+  kp_default_repository: registry.tanzu.dk/tanzu-build-service/build-service
+  kp_default_repository_secret:
+    name: kp-default-repository
+    namespace: tap-install
+  tanzunet_secret:
+    name: tanzunet-registry
+    namespace: tap-install
+  exclude_dependencies: false
+  enable_automatic_dependency_updates: false
+#  ca_cert_data: <CA_CERT_CONTENTS>
+  descriptor_name: lite
+#  injected_sidecar_support: <INJECTED_SIDECAR_SUPPORT>
+#  kubernetes_version: 
+#  kubernetes_distribution: <KUBERNETES_DISTRIBUTION>
