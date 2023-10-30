@@ -13,3 +13,5 @@ postgres/postgres-for-kubernetes-v2.1.0
 rabbitmq/config.json
 makeFiles/__pycache__/
 rabbitmq/__pycache__/
+buildservice-install/
+
