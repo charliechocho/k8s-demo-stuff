@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-tele2
+  name: hello-tele2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-tele2
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-tele2
+    spec:
+      containers:
+      - image: registry.tanzu.dk/app-images/hello-tele2:b2.20231101.083954
+        name: hello-tele2
