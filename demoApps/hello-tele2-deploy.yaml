@@ -16,5 +16,5 @@ spec:
         app: hello-tele2
     spec:
       containers:
-      - image: registry.tanzu.dk/app-images/hello-tele2:b1.20231101.104238
+      - image: registry.tanzu.dk/app-images/hello-tele2:b1.20231101.144617
         name: hello-tele2
