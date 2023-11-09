@@ -1,0 +1,13 @@
+ceip_policy_disclosed: true
+profile: buildservice
+buildservice:
+  kp_default_repository: registry.tanzu.dk/tanzu-build-service/build-service
+  kp_default_repository_secret:
+    name: kp-default-repository
+    namespace: tap-install
+  exclude_dependencies: false
+  tanzunet_secret:
+    name: tanzunet-registry
+    namespace: tap-install
+  enable_automatic_dependency_updates: false
+#  descriptor_name: full
