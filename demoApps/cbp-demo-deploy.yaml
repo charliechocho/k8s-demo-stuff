@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cbp-demo
+  name: cbp-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cbp-demo
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cbp-demo
+    spec:
+      containers:
+      - image: registry.tanzu.dk/app-images/cpb-demo:latest
+        name: cbp-demo

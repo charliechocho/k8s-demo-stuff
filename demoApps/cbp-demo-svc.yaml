@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-tele2-svc
+  name: cbp-demo-svc
   labels:
-    name: hello-tele2-svc
+    name: cbp-demo-svc
 spec:
   ports:
     - port: 80
       targetPort: 8080
       protocol: TCP
   selector:
-    app: hello-tele2
+    app: cbp-demo
   type: LoadBalancer

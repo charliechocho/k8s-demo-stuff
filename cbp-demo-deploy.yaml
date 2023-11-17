@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: hello-tele2
-  name: hello-tele2
+    app: cbp-demo
+  name: cbp-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-tele2
+      app: cbp-demo
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: hello-tele2
+        app: cbp-demo
     spec:
       containers:
-      - image: registry.tanzu.dk/app-images/hello-tele2:b1.20231101.144617
-        name: hello-tele2
+      - image: registry.tanzu.dk/app-images/cpb-demo:latest
+        name: cbp-demo
