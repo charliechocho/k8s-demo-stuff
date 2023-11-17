@@ -16,5 +16,5 @@ spec:
         app: cbp-demo
     spec:
       containers:
-      - image: registry.tanzu.dk/app-images/cpb-demo:latest
+      - image: registry.tanzu.dk/app-images/tbs-demo-app3:b3.20231117.124950
         name: cbp-demo
