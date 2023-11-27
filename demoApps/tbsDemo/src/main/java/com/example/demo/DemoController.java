@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @GetMapping
     public String hello() {
-        return "Hello Buildpack Heroes!! How are you?";
+        return "Wanna know more about Buildpacks?";
     }
 }
