@@ -16,7 +16,7 @@ spec:
         app: cbp-demo
     spec:
       containers:
-      - image: registry.tanzu.dk/app-images/tbs-demo-app:b1.20231127.165820
+      - image: registry.tanzu.dk/app-images/tbs-demo-app:b1.20231201.075350
         name: cbp-demo
         securityContext:
           allowPrivilegeEscalation: true
