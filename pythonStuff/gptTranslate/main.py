@@ -1,4 +1,6 @@
-import openai
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -8,7 +10,6 @@ load_dotenv()
 app = FastAPI()
 
 # Set up OpenAI API credentials
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Define our Pydantic model for the request.
 class TranslationRequest(BaseModel):
@@ -26,14 +27,12 @@ def translate(request: TranslationRequest):
         prompt = f'Given a context, translate the text below into {request.language}.\n\nContext: {request.context}.\n\n'
     prompt += f'Text: "{request.text}"'
 
-    response = openai.ChatCompletion.create(
-        model='gpt-3.5-turbo',
-        messages=[
-            {
-                'role': 'user', 
-                'content': prompt,
-            }
-        ]
-    )
+    response = client.chat.completions.create(model='gpt-3.5-turbo',
+    messages=[
+        {
+            'role': 'user', 
+            'content': prompt,
+        }
+    ])
 
     return {'translation': response.choices[0].message.content}
