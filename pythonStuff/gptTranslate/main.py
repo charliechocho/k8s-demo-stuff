@@ -1,14 +1,13 @@
 from openai import OpenAI
-
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 import os
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+
 load_dotenv()
 app = FastAPI()
-
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 # Set up OpenAI API credentials
 
 # Define our Pydantic model for the request.
