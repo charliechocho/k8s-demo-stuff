@@ -16,3 +16,5 @@ postgres/02_pgSecret.sh
 rabbitmq/rmqYamls/03_rabbitMQSecret.sh
 .env
 __pycache__
+fastapi
+
