@@ -24,11 +24,6 @@ id = create_uuid()
 user = create_user(id)
 answ = input('Do you want to create this user(Y/N)? ("Press Enter for Y ") ') or 'y'
 
-print(user)
-# print(id)
-# print(type(id))
-# print(user["id"])
-
 if answ.lower() == 'y':
     try:
         post_user(user)
