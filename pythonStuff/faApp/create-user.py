@@ -27,6 +27,7 @@ answ = input('Do you want to create this user(Y/N)? ("Press Enter for Y ") ') or
 if answ.lower() == 'y':
     try:
         post_user(user)
+        print('\nExcellent!! You added a new user to the database!')
     except requests.exceptions.ConnectionError as error:
         print(f"Errormessage : {error}\nCan't reach API endpoint!")        
 else:
