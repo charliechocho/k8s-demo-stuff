@@ -18,3 +18,5 @@ rabbitmq/rmqYamls/03_rabbitMQSecret.sh
 .env
 __pycache__
 dbApp
+gitOps/01_gitLabAgentInstall.sh
+
