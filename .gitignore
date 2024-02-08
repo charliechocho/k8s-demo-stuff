@@ -19,4 +19,4 @@ rabbitmq/rmqYamls/03_rabbitMQSecret.sh
 __pycache__
 dbApp
 gitOps/01_gitLabAgentInstall.sh
-
+pythonStuff/faApp/*.sh
