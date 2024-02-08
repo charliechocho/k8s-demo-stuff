@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fa-app
+  name: fa-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fa-app
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fa-app
+    spec:
+      containers:
+      - image: arn.ocir.io/axu4exjufej2/fa-app/fa-app:0.1
+        name: fa-app
+        securityContext:
+          allowPrivilegeEscalation: true
+          runAsNonRoot: false
+          capabilities:
+            drop: ["ALL"]
+          seccompProfile:
+            type: RuntimeDefault
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fa-app-svc
+  labels:
+    name: fa-app-svc
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    app: fa-app
+  type: LoadBalancer
