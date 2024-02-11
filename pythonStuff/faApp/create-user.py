@@ -18,7 +18,7 @@ def create_user(id):
     return json.dumps(userdict)
     
 def post_user(user):    
-    mkeusr = requests.post('http://127.0.0.1/api/v1/users', data=user)
+    mkeusr = requests.post('http://158.179.201.65:8080/api/v1/users', data=user)
 
 id = create_uuid()
 user = create_user(id)
