@@ -16,7 +16,7 @@ spec:
         app: fa-app
     spec:
       containers:
-      - image: arn.ocir.io/axu4exjufej2/fa-app/fa-app:0.1
+      - image: arn.ocir.io/axu4exjufej2/mattiassoderberj/fa-app/fa-app:0.6
         name: fa-app
         securityContext:
           allowPrivilegeEscalation: true
