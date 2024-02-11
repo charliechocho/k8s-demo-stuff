@@ -5,7 +5,8 @@ metadata:
 spec:
   containers:
   - name: fa-app
-    image: arn.ocir.io/axu4exjufej2/mattiassoderberj/fa-app/fa-app:0.6
+    image: arn.ocir.io/axu4exjufej2/mattiassoderberj/fa-app/fa-app:0.7-arm64
+    imagePullPolicy: Always
   imagePullSecrets:
   - name: fa-app-secret
 
