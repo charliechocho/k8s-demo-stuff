@@ -11,12 +11,12 @@ spec:
       app: fa-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: fa-app
     spec:
       containers:
-      - image: arn.ocir.io/axu4exjufej2/mattiassoderberj/fa-app/fa-app:0.6
+      - image: arn.ocir.io/axu4exjufej2/mattiassoderberj/fa-app/fa-app:0.8-arm64
+        imagePullPolicy: Always
         name: fa-app
         securityContext:
           allowPrivilegeEscalation: true
@@ -36,8 +36,8 @@ metadata:
     name: fa-app-svc
 spec:
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 8080
+      targetPort: 8080
       protocol: TCP
   selector:
     app: fa-app
