@@ -1,4 +1,4 @@
-FROM python:3.12.2-slim-bullseye
+FROM --platform=linux/arm64 python:3.12.2-slim-bullseye
 
 WORKDIR /code
 
