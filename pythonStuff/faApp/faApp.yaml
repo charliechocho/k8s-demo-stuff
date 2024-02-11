@@ -25,6 +25,8 @@ spec:
             drop: ["ALL"]
           seccompProfile:
             type: RuntimeDefault
+      imagePullSecrets:
+        - name: fa-app-secret
 ---
 apiVersion: v1
 kind: Service
