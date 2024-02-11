@@ -4,7 +4,7 @@ import json
 def list_users():
     #it_no = 1
     id_list = {}
-    getres = requests.get('http://127.0.0.1/api/v1/users')
+    getres = requests.get('http://158.179.201.65:8080/api/v1/users')
     res = getres.json()
     for it_no, item in enumerate(res, 1):
         print(f"{it_no}: {item.get('id')}\
@@ -28,7 +28,7 @@ def make_usr_updates():
     return json.dumps(userdict)
     
 def update_user(uid, update):
-    useput = requests.put(f'http://127.0.0.1/api/v1/users/{uid}', data=update)
+    useput = requests.put(f'http://158.179.201.65:8080/api/v1/users/{uid}', data=update)
     print('The user has now been updated!')
 
 id_list = list_users()
