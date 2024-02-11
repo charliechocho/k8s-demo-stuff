@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fa-app
+spec:
+  containers:
+  - name: fa-app
+    image: arn.ocir.io/axu4exjufej2/fa-app/fa-app:0.2
+  imagePullSecrets:
+  - name: fa-app-secret
+
+
