@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: leader
-        image: registry.tanzu.dk/guest-book/redis:6.0.5
+        image: registry.guzware.net/guest-book/redis:6.0.3
         resources:
           requests:
             cpu: 100m
