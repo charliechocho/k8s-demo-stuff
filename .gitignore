@@ -20,5 +20,6 @@ rabbitmq/rmqYamls/03_rabbitMQSecret.sh
 __pycache__
 dbApp
 pgApp
+.vscode
 gitOps/01_gitLabAgentInstall.sh
 pythonStuff/faApp/*.sh
