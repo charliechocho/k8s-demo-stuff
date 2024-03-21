@@ -19,6 +19,6 @@ rabbitmq/rmqYamls/03_rabbitMQSecret.sh
 .env
 __pycache__
 dbApp
-pgDemo
+pgApp
 gitOps/01_gitLabAgentInstall.sh
 pythonStuff/faApp/*.sh
