@@ -29,7 +29,7 @@ spec:
     username: pgadmin
   postgresVersion:
     name: postgres-15 # View available versions with `kubectl get postgresversion`
-  serviceType: ClusterIP
+  serviceType: LoadBalancer
   imagePullSecret:
     name: regsecret
 # highAvailability:
